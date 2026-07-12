@@ -207,34 +207,20 @@ function BenchmarkRow({ kpi, median, p75, userVal }: {
         )}
       </div>
       {(() => {
-        // Check if labels would overlap (within 12% of each other)
         const tooClose = Math.abs(medPct - p75Pct) < 12;
+        // Arrow (▲) is half a character wide (~4px). We position the span so the arrow
+        // sits exactly on the marker, then the value text flows to the right naturally.
+        const arrowOffset = "translateX(-4px)";
         return (
           <div style={{ position: "relative", marginTop: 4, fontSize: 10, minHeight: tooClose ? 32 : 18 }}>
             <span style={{ position: "absolute", left: 0, color: R.textLight }}>0{kpi.einheit}</span>
             <span style={{ position: "absolute", right: 0, color: R.textLight }}>{maxV}{kpi.einheit}</span>
-            {/* Median label — arrow directly above its marker */}
-            <span style={{
-              position: "absolute",
-              left: `${medPct}%`,
-              top: tooClose ? 0 : 0,
-              transform: "translateX(-50%)",
-              color: R.amber,
-              whiteSpace: "nowrap" as const,
-              textAlign: "center" as const,
-              display: "block",
-            }}>▲ {median}{kpi.einheit}</span>
-            {/* P75 label — stacked below if too close */}
-            <span style={{
-              position: "absolute",
-              left: `${p75Pct}%`,
-              top: tooClose ? 16 : 0,
-              transform: "translateX(-50%)",
-              color: R.green,
-              whiteSpace: "nowrap" as const,
-              textAlign: "center" as const,
-              display: "block",
-            }}>▲ {p75}{kpi.einheit}</span>
+            <span style={{ position: "absolute", left: `${medPct}%`, top: 0, transform: arrowOffset, color: R.amber, whiteSpace: "nowrap" as const }}>
+              ▲ {median}{kpi.einheit}
+            </span>
+            <span style={{ position: "absolute", left: `${p75Pct}%`, top: tooClose ? 16 : 0, transform: arrowOffset, color: R.green, whiteSpace: "nowrap" as const }}>
+              ▲ {p75}{kpi.einheit}
+            </span>
           </div>
         );
       })()}

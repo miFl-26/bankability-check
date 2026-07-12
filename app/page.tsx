@@ -40,7 +40,7 @@ const MODULES = [
     beschreibung: "Aktuelle Zinsen, Kreditkonditionen und Finanzierungsmarkt-Indikatoren für den deutschen Mittelstand.",
     dauer: "Echtzeit",
     icon: "◎",
-    status: "Demnächst",
+    status: "Verfügbar",
   },
 ];
 
