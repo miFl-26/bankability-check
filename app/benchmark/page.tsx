@@ -206,12 +206,38 @@ function BenchmarkRow({ kpi, median, p75, userVal }: {
           <div style={{ position: "absolute", left: `${userPct}%`, top: -6, bottom: -6, width: 3, background: s.bar, borderRadius: 2, transform: "translateX(-50%)", boxShadow: `0 0 0 3px white, 0 0 0 4px ${s.bar}` }} />
         )}
       </div>
-      <div style={{ position: "relative", height: 18, marginTop: 4, fontSize: 10 }}>
-        <span style={{ position: "absolute", left: 0, color: R.textLight }}>0{kpi.einheit}</span>
-        <span style={{ position: "absolute", right: 0, color: R.textLight }}>{maxV}{kpi.einheit}</span>
-        <span style={{ position: "absolute", left: `${medPct}%`, transform: "translateX(-50%)", color: R.amber, whiteSpace: "nowrap" as const }}>▲ {median}{kpi.einheit}</span>
-        <span style={{ position: "absolute", left: `${p75Pct}%`, transform: "translateX(-50%)", color: R.green, whiteSpace: "nowrap" as const }}>▲ {p75}{kpi.einheit}</span>
-      </div>
+      {(() => {
+        // Check if labels would overlap (within 12% of each other)
+        const tooClose = Math.abs(medPct - p75Pct) < 12;
+        return (
+          <div style={{ position: "relative", marginTop: 4, fontSize: 10, minHeight: tooClose ? 32 : 18 }}>
+            <span style={{ position: "absolute", left: 0, color: R.textLight }}>0{kpi.einheit}</span>
+            <span style={{ position: "absolute", right: 0, color: R.textLight }}>{maxV}{kpi.einheit}</span>
+            {/* Median label — arrow directly above its marker */}
+            <span style={{
+              position: "absolute",
+              left: `${medPct}%`,
+              top: tooClose ? 0 : 0,
+              transform: "translateX(-50%)",
+              color: R.amber,
+              whiteSpace: "nowrap" as const,
+              textAlign: "center" as const,
+              display: "block",
+            }}>▲ {median}{kpi.einheit}</span>
+            {/* P75 label — stacked below if too close */}
+            <span style={{
+              position: "absolute",
+              left: `${p75Pct}%`,
+              top: tooClose ? 16 : 0,
+              transform: "translateX(-50%)",
+              color: R.green,
+              whiteSpace: "nowrap" as const,
+              textAlign: "center" as const,
+              display: "block",
+            }}>▲ {p75}{kpi.einheit}</span>
+          </div>
+        );
+      })()}
     </div>
   );
 }
