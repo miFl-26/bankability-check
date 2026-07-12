@@ -87,6 +87,7 @@ export default function Home() {
               transition: "box-shadow 0.2s, transform 0.2s",
               cursor: isAvailable ? "pointer" : "default",
               textDecoration: "none",
+              height: "100%",
             }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
                 <div style={{ fontSize: 24, color: R.greenMid }}>{mod.icon}</div>
@@ -116,11 +117,11 @@ export default function Home() {
           );
 
           return isAvailable ? (
-            <Link key={mod.href} href={mod.href} style={{ textDecoration: "none" }}>
+            <Link key={mod.href} href={mod.href} style={{ textDecoration: "none", display: "flex" }}>
               {card}
             </Link>
           ) : (
-            <div key={mod.href}>{card}</div>
+            <div key={mod.href} style={{ display: "flex" }}>{card}</div>
           );
         })}
       </div>

@@ -239,7 +239,7 @@ export default function MarktentwicklungPage() {
         </div>
 
         <div style={{ padding: "14px 20px", background: R.amberLight, border: `1px solid ${R.border}`, borderRadius: 6, fontSize: 11, color: R.textMid, lineHeight: 1.7 }}>
-          <strong style={{ color: R.amber }}>Marktlage Q2 2026:</strong> <cite index="3-1">Der Anteil kreditinteressierter Mittelständler, die restriktive Kreditvergabe berichten, stieg auf 40,5 % — ein neuer Rekordwert seit Beginn der Erhebung 2017.</cite> <cite index="1-1">Gleichzeitig sinkt die grundsätzliche Kreditbereitschaft der KMU: Nur noch 27 % würden aktuell einen Bankkredit in Betracht ziehen.</cite> Für Finanzierungsvorhaben empfiehlt sich daher eine besonders sorgfältige Vorbereitung.
+          <strong style={{ color: R.amber }}>Marktlage Q2 2026:</strong> Der Anteil kreditinteressierter Mittelständler mit restriktiver Kreditvergabe stieg auf 40,5 % — ein neuer Rekordwert seit Beginn der Erhebung 2017 (KfW-ifo-Kredithürde). Gleichzeitig sinkt die grundsätzliche Kreditbereitschaft: Nur noch 27 % der KMU würden aktuell einen Bankkredit in Betracht ziehen (KfW-Mittelstandspanel Jan. 2026). Für Finanzierungsvorhaben empfiehlt sich daher eine besonders sorgfältige Vorbereitung.
         </div>
       </div>
     </div>
