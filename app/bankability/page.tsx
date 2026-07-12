@@ -377,8 +377,11 @@ export default function BankabilityCheck() {
       {/* Sidebar */}
       <div style={{ background: R.white, borderRight: `1px solid ${R.border}`, display: "flex", flexDirection: "column", position: "sticky", top: 0, height: "100vh", overflowY: "auto" }}>
         <div style={{ padding: "24px 28px", borderBottom: `1px solid ${R.border}` }}>
-          <div style={{ fontSize: 20, fontWeight: 700, letterSpacing: "0.08em", color: R.green }}>RÖDL</div>
-          <div style={{ fontSize: 11, color: R.textLight, marginTop: 2, letterSpacing: "0.06em" }}>Debt Advisory</div>
+          <a href="/" style={{ textDecoration: "none" }}>
+            <div style={{ fontSize: 20, fontWeight: 700, letterSpacing: "0.08em", color: R.green }}>RÖDL</div>
+            <div style={{ fontSize: 11, color: R.textLight, marginTop: 2, letterSpacing: "0.06em" }}>← Alle Module</div>
+          </a>
+          <div style={{ fontSize: 11, color: R.textLight, marginTop: 8, letterSpacing: "0.06em" }}>Debt Advisory</div>
         </div>
         <div style={{ padding: "28px", flex: 1, display: "flex", flexDirection: "column", gap: 24 }}>
           <div>
