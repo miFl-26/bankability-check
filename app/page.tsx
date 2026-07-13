@@ -50,7 +50,7 @@ export default function Home() {
       {/* Header */}
       <div style={{ background: R.white, borderBottom: `1px solid ${R.border}`, padding: "0 64px", height: 64, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <div>
-          <span style={{ fontSize: 20, fontWeight: 700, letterSpacing: "0.08em", color: R.green }}>RÖDL</span>
+          <span style={{ fontSize: 20, fontWeight: 700, letterSpacing: "0.08em", color: R.green }}>BETA</span>
           <span style={{ fontSize: 11, color: R.textLight, marginLeft: 12, letterSpacing: "0.06em" }}>Debt Advisory</span>
         </div>
         <div style={{ fontSize: 11, color: R.textLight }}>Finanzierungs-Tools für den Mittelstand</div>
@@ -131,7 +131,7 @@ export default function Home() {
         <div style={{ fontSize: 11, color: R.textLight }}>
           Benchmarks: Deutsche Bundesbank, Jahresabschlussstatistik Mai 2026 (Berichtsjahr 2023)
         </div>
-        <div style={{ fontSize: 11, color: R.textLight }}>© 2026 RÖDL · roedl.com</div>
+        <div style={{ fontSize: 11, color: R.textLight }}>© 2026 BETA</div>
       </div>
     </div>
   );

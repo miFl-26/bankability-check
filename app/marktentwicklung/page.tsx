@@ -137,7 +137,7 @@ export default function MarktentwicklungPage() {
 
       <div style={{ background: R.white, borderBottom: `1px solid ${R.border}`, padding: "0 48px", height: 60, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <a href="/" style={{ fontSize: 18, fontWeight: 700, letterSpacing: "0.08em", color: R.green, textDecoration: "none" }}>RÖDL</a>
+          <a href="/" style={{ fontSize: 18, fontWeight: 700, letterSpacing: "0.08em", color: R.green, textDecoration: "none" }}>BETA</a>
           <span style={{ color: R.border }}>|</span>
           <span style={{ fontSize: 13, color: R.textMid }}>Marktentwicklung</span>
         </div>

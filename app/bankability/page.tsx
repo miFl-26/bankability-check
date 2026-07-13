@@ -177,7 +177,7 @@ function EinschaetzungCard({ data }: { data: EinschaetzungData }) {
   return (
     <div style={{ background: R.white, border: `1px solid ${R.border}`, borderRadius: 8, overflow: "hidden", maxWidth: 620, width: "100%", marginTop: 8, boxShadow: "0 4px 24px rgba(0,0,0,0.06)" }}>
       <div style={{ background: R.green, padding: "24px 32px" }}>
-        <div style={{ fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase" as const, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>RÖDL · Debt Advisory</div>
+        <div style={{ fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase" as const, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>BETA · Debt Advisory</div>
         <div style={{ fontSize: 18, color: R.white, fontWeight: 300 }}>Bankability-Einschätzung</div>
         <div style={{ marginTop: 12, display: "flex", gap: 20, flexWrap: "wrap" as const }}>
           {[
@@ -266,7 +266,7 @@ function MessageBubble({ msg }: { msg: Message }) {
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: isAI ? "flex-start" : "flex-end", gap: 5 }}>
       <div style={{ fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: R.textLight }}>
-        {isAI ? "RÖDL · Debt Advisory" : "Sie"}
+        {isAI ? "BETA · Debt Advisory" : "Sie"}
       </div>
       {displayText && (
         <div style={{ maxWidth: 560, padding: "14px 18px", borderRadius: isAI ? "2px 12px 12px 12px" : "12px 2px 12px 12px", background: isAI ? R.white : R.green, border: isAI ? `1px solid ${R.border}` : "none", fontSize: 14, lineHeight: 1.75, color: isAI ? R.text : R.white, boxShadow: isAI ? "0 1px 4px rgba(0,0,0,0.06)" : "none", whiteSpace: "pre-wrap" }}>
@@ -281,7 +281,7 @@ function MessageBubble({ msg }: { msg: Message }) {
 function TypingIndicator() {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
-      <div style={{ fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: R.textLight }}>RÖDL · Debt Advisory</div>
+      <div style={{ fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: R.textLight }}>BETA · Debt Advisory</div>
       <div style={{ padding: "14px 18px", borderRadius: "2px 12px 12px 12px", background: R.white, border: `1px solid ${R.border}`, display: "flex", gap: 5, alignItems: "center", width: "fit-content", boxShadow: "0 1px 4px rgba(0,0,0,0.06)" }}>
         {[0,1,2].map(i => (
           <div key={i} style={{ width: 6, height: 6, borderRadius: "50%", background: R.greenMid, animation: `pulse 1.2s ease-in-out ${i*0.2}s infinite` }} />
@@ -378,7 +378,7 @@ export default function BankabilityCheck() {
       <div style={{ background: R.white, borderRight: `1px solid ${R.border}`, display: "flex", flexDirection: "column", position: "sticky", top: 0, height: "100vh", overflowY: "auto" }}>
         <div style={{ padding: "24px 28px", borderBottom: `1px solid ${R.border}` }}>
           <a href="/" style={{ textDecoration: "none" }}>
-            <div style={{ fontSize: 20, fontWeight: 700, letterSpacing: "0.08em", color: R.green }}>RÖDL</div>
+            <div style={{ fontSize: 20, fontWeight: 700, letterSpacing: "0.08em", color: R.green }}>BETA</div>
             <div style={{ fontSize: 11, color: R.textLight, marginTop: 2, letterSpacing: "0.06em" }}>← Alle Module</div>
           </a>
           <div style={{ fontSize: 11, color: R.textLight, marginTop: 8, letterSpacing: "0.06em" }}>Debt Advisory</div>
@@ -415,7 +415,7 @@ export default function BankabilityCheck() {
             </div>
           </div>
         </div>
-        <div style={{ padding: "16px 28px", borderTop: `1px solid ${R.border}`, fontSize: 10, color: R.textLight }}>© 2026 RÖDL · roedl.com</div>
+        <div style={{ padding: "16px 28px", borderTop: `1px solid ${R.border}`, fontSize: 10, color: R.textLight }}>© 2026 BETA</div>
       </div>
 
       {/* Chat */}
